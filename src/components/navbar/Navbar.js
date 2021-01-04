@@ -1,4 +1,5 @@
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 import {
   Button,
   NavDropdown,
@@ -31,20 +32,26 @@ function Navbarapp({ setSearchmovie, setSearchrate }) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <div>
+            <h6>Search Movie by Name </h6>
+          </div>
           <Form inline>
             <FormControl
               type="text"
-              placeholder="Searching Movie by name"
+              placeholder="Search Movie by name"
               className="mr-sm-2"
               onChange={(e) => setSearchmovie(e.target.value)}
             />
-            <FormControl
-              type="texte"
-              placeholder="Searching Movie by rate"
-              className="mr-sm-2"
-              onChange={(e) => setSearchrate(e.target.value)}
-            />
           </Form>
+          <div>
+            <h6>Search Movie by rating </h6>
+          </div>
+          <ReactStars
+            count={5}
+            onChange={(e) => setSearchrate(e)}
+            size={24}
+            starColor="#ffd700"
+          />
         </Navbar.Collapse>
       </Navbar>
     </div>
