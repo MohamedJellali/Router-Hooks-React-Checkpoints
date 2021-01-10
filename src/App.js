@@ -72,12 +72,11 @@ function App() {
           exact
           path="/"
           render={(props) => (
-            <div>
-              <div className="App">
-                <div>
-                  <h1>MEDFLIX</h1>
-                </div>
+            <div className="App">
+              <div>
+                <h1>MEDFLIX</h1>
               </div>
+
               <MovieList
                 searchmovie={searchmovie}
                 searchrate={searchrate}
