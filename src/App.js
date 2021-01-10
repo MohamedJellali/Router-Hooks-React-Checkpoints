@@ -67,25 +67,25 @@ function App() {
         setSearchmovie={setSearchmovie}
         setSearchrate={setSearchrate}
       />
-      <Link to="/">
-        <div className="App">
-          <div>
-            <h1>MEDFLIX</h1>
-          </div>
-        </div>
-      </Link>
       <div className="routes">
         <Route
           exact
           path="/"
           render={(props) => (
-            <MovieList
-              searchmovie={searchmovie}
-              searchrate={searchrate}
-              movies={movies}
-              setMovies={setMovies}
-              {...props}
-            />
+            <div>
+              <div className="App">
+                <div>
+                  <h1>MEDFLIX</h1>
+                </div>
+              </div>
+              <MovieList
+                searchmovie={searchmovie}
+                searchrate={searchrate}
+                movies={movies}
+                setMovies={setMovies}
+                {...props}
+              />
+            </div>
           )}
         />
         <div className="inf">
